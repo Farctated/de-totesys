@@ -33,7 +33,7 @@ This project includes the following directories:
 
 ## Authors
 
- - Duncan Cornish (github.com/duncancornish)
+ - [Duncan Cornish](github.com/duncancornish)
  - Neill Hallard (github.com/nhallard)
  - Abdulmomen Jameli (github.com/Farctated)
  - Mukund Pandit (github.com/emjeepee)
