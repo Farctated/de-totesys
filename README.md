@@ -33,11 +33,11 @@ This project includes the following directories:
 
 ## Authors
 
- - [Duncan Cornish](github.com/duncancornish)
- - Neill Hallard (github.com/nhallard)
- - Abdulmomen Jameli (github.com/Farctated)
- - Mukund Pandit (github.com/emjeepee)
- - Amar Walji (github.com/AvengedA)
+ - [Duncan Cornish](https://github.com/duncancornish)
+ - [Neill Hallard](https://github.com/nhallard)
+ - [Abdulmomen Jameli](https://github.com/Farctated)
+ - [Mukund Pandit](https://github.com/emjeepee)
+ - [Amar Walji](https://github.com/AvengedA)
 
 
 
