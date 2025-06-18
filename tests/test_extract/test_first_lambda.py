@@ -1,15 +1,15 @@
-from src.lambda_handler import lambda_handler
+from src.extract.lambda_handler import lambda_handler
 from unittest.mock import Mock, patch
 import pytest
 from moto import mock_aws
 import json
 import boto3
 import os
-from src.utils import read_table, convert_data
-from src.lambda_utils import get_data_from_db, write_to_s3
-from src.conn_to_db import conn_to_db
+from src.extract.utils import read_table, convert_data
+from src.extract.lambda_utils import get_data_from_db, write_to_s3
+from src.shared.conn_to_db import conn_to_db
 from pg8000.native import Connection
-from src.utils_write_to_ingestion_bucket import (
+from src.extract.utils_write_to_ingestion_bucket import (
     write_to_ingestion_bucket,
     save_updated_table_to_S3,
     get_most_recent_table_data,

@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock
-from src.First_util_for_3rd_lambda import get_keys_of_latest_tables
+from src.load.First_util_for_3rd_lambda import get_keys_of_latest_tables
 
 
 def test_get_keys_of_latest_tables_returns_correct_keys():

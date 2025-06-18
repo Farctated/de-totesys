@@ -1,11 +1,11 @@
 import pytest
 from unittest.mock import patch, Mock
-from src.third_lambda import lambda_handler
+from src.load.third_lambda import lambda_handler
 
 
-@patch("src.third_lambda.make_SQL_queries_to_warehouse")
-@patch("src.third_lambda.get_pandas_dataFrames")
-@patch("src.third_lambda.boto3.client")
+@patch("src.load.third_lambda.make_SQL_queries_to_warehouse")
+@patch("src.load.third_lambda.get_pandas_dataFrames")
+@patch("src.load.third_lambda.boto3.client")
 def test_lambda_handler_integrates_utility_functions_correctly(
     mock_boto_client, mock_get_dfs, mock_make_queries
 ):

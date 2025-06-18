@@ -1,4 +1,4 @@
-from src.utils_write_to_ingestion_bucket import create_formatted_timestamp
+from src.extract.utils_write_to_ingestion_bucket import create_formatted_timestamp
 
 import botocore
 from botocore.exceptions import ClientError

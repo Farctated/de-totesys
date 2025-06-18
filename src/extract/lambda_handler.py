@@ -1,10 +1,9 @@
 import boto3
-from src.utils_write_to_ingestion_bucket import write_to_ingestion_bucket
-from src.utils import convert_data, read_table
-from src.conn_to_db import conn_to_db, close_db
-from src.lambda_utils import get_data_from_db, write_to_s3
-from src.utils_write_to_ingestion_bucket import write_to_ingestion_bucket
-from src.change_after_time_timestamp import change_after_time_timestamp
+from src.extract.utils import convert_data, read_table
+from src.shared.conn_to_db import conn_to_db, close_db
+from src.extract.lambda_utils import get_data_from_db, write_to_s3
+from src.extract.utils_write_to_ingestion_bucket import write_to_ingestion_bucket
+from src.extract.change_after_time_timestamp import change_after_time_timestamp
 
 
 # write_to_s3(data_list, s3_client, write_to_ingestion_bucket, bucket_name)

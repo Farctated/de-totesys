@@ -1,12 +1,11 @@
-from src.conn_to_db import conn_to_db
+from src.shared.conn_to_db import conn_to_db
 from unittest.mock import Mock, patch, ANY
 import pytest
 import os
-from src.conn_to_db import conn_to_db
 
 
 def test_conn_to_db_connects_to_the_database():
-    with patch("src.conn_to_db.Connection") as mock_Connection_to_db:
+    with patch("src.shared.conn_to_db.Connection") as mock_Connection_to_db:
         DB_NAME = "TESTDB"
         os.environ[f"TF_{DB_NAME}_DB_USER"] = "test_db_name"
         os.environ[f"TF_{DB_NAME}_DB_PASSWORD"] = "test_db_name"

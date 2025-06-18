@@ -2,7 +2,7 @@ from unittest.mock import Mock
 import pytest
 from unittest.mock import Mock, patch, ANY
 from moto import mock_aws
-from src.change_after_time_timestamp import change_after_time_timestamp
+from src.extract.change_after_time_timestamp import change_after_time_timestamp
 
 import os
 import datetime
@@ -130,7 +130,7 @@ def test_that_function_change_after_time_timestamp_saves_new_timestamp_to_bucket
     ts_key = yield_list[5]
 
     # act
-    with patch("src.change_after_time_timestamp.datetime") as mock_datetime:
+    with patch("src.extract.change_after_time_timestamp.datetime") as mock_datetime:
         mock_now = Mock()
         mock_now.isoformat.return_value = "2025-06-04T08:28:12.301474+00:00"
         mock_datetime.now.return_value = mock_now

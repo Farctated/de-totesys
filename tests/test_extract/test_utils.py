@@ -1,4 +1,4 @@
-from src.utils import read_table, convert_data
+from src.extract.utils import read_table, convert_data
 from unittest.mock import Mock
 import pytest
 import datetime

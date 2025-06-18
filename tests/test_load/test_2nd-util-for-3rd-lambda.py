@@ -1,7 +1,7 @@
 import pytest
 import pandas as pd
 from unittest.mock import patch, Mock
-from src.second_util_for_3rd_lambda import (
+from src.load.second_util_for_3rd_lambda import (
     put_table_data_in_warehouse,
     convert_dataframe_to_SQL_query_string,
 )
@@ -74,9 +74,9 @@ def test_put_table_data_in_warehouse_executes_all_queries():
     # mock COnnection object mock_conn;
     # also patch close_db():
     with patch(
-        "src.second_util_for_3rd_lambda.conn_to_db", return_value=mock_conn
+        "src.load.second_util_for_3rd_lambda.conn_to_db", return_value=mock_conn
     ) as mock_conn_to_db, patch(
-        "src.second_util_for_3rd_lambda.close_db"
+        "src.load.second_util_for_3rd_lambda.close_db"
     ) as mock_close_db:
 
         # Act

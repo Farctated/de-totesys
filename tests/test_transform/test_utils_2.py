@@ -1,5 +1,5 @@
 import boto3.exceptions
-from src.utils_2 import *
+from src.transform.utils_2 import *
 from unittest.mock import Mock
 from moto import mock_aws
 import boto3

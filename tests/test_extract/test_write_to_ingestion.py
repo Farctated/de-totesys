@@ -7,7 +7,7 @@ from datetime import datetime
 import os
 import re
 from botocore.exceptions import ClientError
-from src.utils_write_to_ingestion_bucket import (
+from src.extract.utils_write_to_ingestion_bucket import (
     write_to_ingestion_bucket,
     get_most_recent_table_data,
     create_formatted_timestamp,
@@ -369,7 +369,7 @@ def test_function_write_to_ingestion_bucket_raises_correct_exception_if_called_f
 
     # act and assert:
     with patch(
-        "src.utils_write_to_ingestion_bucket.get_most_recent_table_data",
+        "src.extract.utils_write_to_ingestion_bucket.get_most_recent_table_data",
         side_effect=client_error_from_mock_function,
     ):
         result = write_to_ingestion_bucket(ur_mdt2, bucket_name, file_location)
@@ -410,7 +410,7 @@ def test_function_write_to_ingestion_bucket_raises_correct_exception_if_called_f
 
     # act and assert:
     with patch(
-        "src.utils_write_to_ingestion_bucket.get_most_recent_table_data",
+        "src.extract.utils_write_to_ingestion_bucket.get_most_recent_table_data",
         side_effect=client_error_from_mock_function,
     ):
         result = write_to_ingestion_bucket(ur_mdt2, bucket_name, file_location)
@@ -451,7 +451,7 @@ def test_function_write_to_ingestion_bucket_raises_correct_exception_if_called_f
 
     # act and assert:
     with patch(
-        "src.utils_write_to_ingestion_bucket.save_updated_table_to_S3",
+        "src.extract.utils_write_to_ingestion_bucket.save_updated_table_to_S3",
         side_effect=client_error_from_mock_function,
     ):
         result = write_to_ingestion_bucket(ur_mdt2, bucket_name, file_location)

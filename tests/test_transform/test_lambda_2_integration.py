@@ -2,7 +2,7 @@ import json
 import pytest
 from moto import mock_aws
 import boto3
-from src.lambda_2 import lambda_handler
+from src.transform.lambda_2 import lambda_handler
 from datetime import datetime
 from unittest.mock import patch
 
@@ -79,7 +79,7 @@ class TestSalesOrderIntegration:
                 content = obj["Body"].read()
                 assert len(content) > 0
 
-    @patch("src.lambda_2.datetime")
+    @patch("src.transform.lambda_2.datetime")
     def test_parquet_key_contains_timestamp(self, mock_datetime):
         fake_time = datetime(2025, 1, 1, 12, 0, 0)
         mock_datetime.datetime.now.return_value = fake_time
